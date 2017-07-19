@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<AbsoluteLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#CD2990" >
+
+    <Button
+        android:id="@+id/Button01"
+        android:layout_width="154dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="32dp"
+        android:layout_x="86dp"
+        android:layout_y="376dp"
+        android:text="Try Again"
+        android:textColor="#780404" />
+
+    <ImageView
+        android:id="@+id/imageView1"
+        android:layout_width="254dp"
+        android:layout_height="250dp"
+        android:layout_x="34dp"
+        android:layout_y="117dp"
+        android:src="@drawable/heart" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="135dp"
+        android:layout_height="128dp"
+        android:layout_x="114dp"
+        android:layout_y="190dp"
+        android:text="90"
+        android:textColor="#ffffff"
+        android:textSize="120px"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_x="44dp"
+        android:layout_y="77dp"
+        android:text="Your Love-Percentage"
+        android:textColor="#780404"
+        android:textSize="35px" />
+
+</AbsoluteLayout>
+

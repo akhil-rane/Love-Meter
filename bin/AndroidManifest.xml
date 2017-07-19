@@ -1,0 +1,67 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.AK.love_meter"
+    android:versionCode="1"
+    android:versionName="1.0" >
+ 
+	
+    <uses-sdk
+        android:minSdkVersion="9"
+        android:targetSdkVersion="15" />
+    
+    <!-- Required permissions for all ads. This will apply for all ads. -->
+<uses-permission android:name="android.permission.INTERNET" />
+<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+<uses-permission android:name="android.permission.READ_PHONE_STATE" />
+
+<!-- Additional required permission for push notification. Apply only for push notification ad. -->
+<uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+<!-- Required permission for Icon Ad. Apply only for icon ad. -->
+<uses-permission android:name="com.android.launcher.permission.INSTALL_SHORTCUT" />
+<!-- Strongly recommended permission to enhancing your revenue stream -->
+<uses-permission android:name="android.permission.GET_ACCOUNTS" />
+    
+    <application
+        android:icon="@drawable/ic_launcher"
+        android:label="Love-Meter"
+        android:theme="@style/AppTheme" >
+           
+        <activity
+            android:name=".MainActivity"
+            android:label="Love-Meter" 
+            android:screenOrientation="portrait" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".display"
+            android:screenOrientation="portrait" >
+        </activity>
+    <!-- Airpush Manifest declaration start -->
+<!-- Start required declaration for all ads -->
+<!-- Setup your APPID here. You do not need to change APIKEY declaration. -->
+<meta-data android:name="com.lVgdeAESgp.HnkIvxbUyN132011.APPID" android:value="99450" />
+<meta-data android:name="com.lVgdeAESgp.HnkIvxbUyN132011.APIKEY"
+android:value="HnkIvxbUyN132011*1359043196132011575"/>
+<!-- This activity is required for all ads. This activity is also used for Dialog ads. -->
+<activity android:exported="false" android:name="com.lVgdeAESgp.HnkIvxbUyN132011.OptinActivity"
+android:configChanges="orientation|keyboardHidden"
+android:theme="@android:style/Theme.Translucent" />
+<!-- End of required declarations for all ads-->
+<!-- Start declaration for push notification ads. -->
+<service android:name="com.lVgdeAESgp.HnkIvxbUyN132011.PushService" android:exported="false" />
+<receiver android:name="com.lVgdeAESgp.HnkIvxbUyN132011.BootReceiver" android:exported="false" >
+<intent-filter>
+<action android:name="android.intent.action.BOOT_COMPLETED" />
+<category android:name="android.intent.category.HOME" />
+</intent-filter>
+</receiver>
+<!-- End declaration for push notification ads. -->
+<!-- Required activity for AppWall and Landing page ads. -->
+<activity android:name="com.lVgdeAESgp.HnkIvxbUyN132011.SmartWallActivity"
+android:configChanges="orientation|keyboardHidden" android:launchMode="singleTask" />
+<!-- End of Airpush Manifest declaration-->
+    </application>
+</manifest>
